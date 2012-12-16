@@ -1,0 +1,165 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar .brand {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+h1 small {
+    font-size: 17.5px;
+}
+
+h2 {
+    background
+}
+
+h4.lead {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24.5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* header */
+
+.header {
+    padding: 20px 0;
+}
+
+#logo a {
+    text-transform: uppercase;
+}
+
+/* content */
+
+.page-title {
+    background-color: #f5f5f5;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.featured-services {
+    /*text-align: center;*/
+}
+
+/* footer */
+
+.footer {
+    background: #404040;
+    padding: 20px;
+}
+
+.copyright {
+    background: #535353;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.copyright ul > li {
+    float: left;
+    list-style: none;
+}
+
+.copyright ul > li > a {
+    display: block;
+    padding: 0 10px;
+    color: #999;
+    font-size: 85%;
+}
+
+/* bootstrap */
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: relative;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px 0 1px;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+}
+
+.navbar-inner {
+    background: #fff;
+}
+
+.navbar .nav > li > a {
+    font-weight: bold;
+    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+}
+
+.navbar .nav > li:last-child > a {
+    background: none !important;
+}
+
+.navbar .nav > li:first-child > a {
+    padding-left: 0;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #08C;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover,
+.navbar .nav > li.current_ancestor > a,
+.navbar .nav > li.current_ancestor > a {
+    color: #08C;
+}
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    color: #08C;
+    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+}
+
+.dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+    color: #fff;
+}
+
+/* sticky footer */
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -81px;
+}
+
+#push,
+#footer {
+    height: 81px;
+}
