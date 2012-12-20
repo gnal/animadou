@@ -92,8 +92,8 @@ h1 small {
 }
 
 .navbar .nav > li > a {
-    font-weight: bold;
     background: url(/bundles/animadouapp/img/layout/nav_li_separator.png) no-repeat right;
+    color: #000;
 }
 
 .navbar .nav > li:last-child > a {
