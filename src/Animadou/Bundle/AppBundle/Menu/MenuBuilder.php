@@ -31,10 +31,16 @@ class MenuBuilder extends ContainerAware
         $root = $this->container->get('msi_cmf.menu_root_manager')->findRootByName('main');
 
         if (!$root) {
-            return $factory->createItem('default');
+            return $factory->createItem('void');
         }
 
         $menu = $factory->createFromNode($root);
+        if (!$menu->getExtra('published')) {
+            foreach ($menu->getChildren() as $child) {
+                $menu->removeChild($child);
+            }
+        }
+        $this->removeUnpublished($menu);
 
         return $menu;
     }
@@ -73,6 +79,18 @@ class MenuBuilder extends ContainerAware
             } else {
                 $child->setCurrent(false);
                 $this->findCurrent($child);
+            }
+        }
+    }
+
+    public function removeUnpublished($node)
+    {
+        foreach ($node->getChildren() as $child) {
+            if ($child->hasChildren()) {
+                $this->removeUnpublished($child);
+            }
+            if (!$child->getExtra('published')) {
+                $child->getParent()->removeChild($child);
             }
         }
     }
