@@ -1,6 +1,6 @@
 <?php
 
-namespace Animadoo\Bundle\AppBundle\Menu;
+namespace Animadou\Bundle\AppBundle\Menu;
 
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerAware;

@@ -1,7 +1,3 @@
-animadoo_app:
-    resource: "@AnimadooAppBundle/Resources/config/routing.xml"
-    prefix:   /
-
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -9,9 +5,9 @@ fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
     prefix: /profile
 
-# fos_user_register:
-#     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-#     prefix: /register
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
 
 fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
@@ -21,15 +17,14 @@ fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
 
-msi_admin:
-    resource: "@MsiAdminBundle/Resources/config/routing/routing.xml"
+msi_cmf_routing:
+    resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
+    prefix: /{_locale}/admin
 
-msi_admin_loader:
+msi_cmf_page:
+    resource: "@MsiCmfBundle/Resources/config/routing/page.yml"
+    prefix: /
+
+msi_cmf_loader:
     resource: .
-    type: msi_admin
-
-msi_menu:
-    resource: "@MsiMenuBundle/Resources/config/routing/menu.yml"
-
-msi_page:
-    resource: "@MsiPageBundle/Resources/config/routing/page.xml"
+    type: msi_cmf

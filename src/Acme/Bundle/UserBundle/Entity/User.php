@@ -22,34 +22,17 @@ class User extends BaseUser
 
     /**
      * @ORM\ManyToMany(targetEntity="Msi\Bundle\UserBundle\Entity\Group")
-     * @ORM\JoinTable(name="fos_user_users_groups",
+     * @ORM\JoinTable(name="user_users_groups",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
      * )
      */
     protected $groups;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    protected $position;
-
     public function __construct()
     {
         parent::__construct();
-        $this->position = 1;
-    }
-
-    public function getPosition()
-    {
-        return $this->position;
-    }
-
-    public function setPosition($position)
-    {
-        $this->position = $position;
-
-        return $this;
+        $this->groups = new ArrayCollection();
     }
 
     public function getGroups()

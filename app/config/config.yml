@@ -72,31 +72,15 @@ fos_user:
     group:
         group_class: Msi\Bundle\UserBundle\Entity\Group
 
-msi_page:
-    templates:
-        'AnimadooAppBundle::layout.html.twig': 'default'
-    route_whitelist_patterns:
-        - ^fos_user_
-    route_blacklist_patterns:
-        - ^fos_user_security_
-
-msi_block:
-    blocks:
-        template:
-            templates:
-                'ArmrsAppBundle:App:modal.html.twig': 'modal'
-        action:
-            actions:
-                'MsiSliderBundle:Slider:show': 'slider'
-                'MsiSliderBundle:Slider:js': 'slider js'
-                'ArmrsAppBundle:Ad:list': 'Annonces'
-                'ArmrsSliderBundle:QSlider:show': 'qSlider'
-                'ArmrsSliderBundle:QSlider:js': 'qSlider js'
-    slots:
-        content: content
-        content_start: content_start
-        content_top: content_top
-        content_bottom: content_bottom
-        body_top: body_top
-        body_bottom: body_bottom
-        js: js
+msi_cmf:
+    page:
+        layouts:
+            'AnimadouAppBundle::layout.html.twig': 'default'
+    block:
+        actions:
+            'MsiCmfBundle::layout.html.twig': 'Default'
+        templates:
+            'MsiCmfBundle::layout.html.twig': 'Default'
+        slots:
+            content: Content
+            sidebar: Sidebar

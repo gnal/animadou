@@ -1,16 +1,15 @@
-{% extends 'MsiPageBundle::base_layout.html.twig' %}
-
-{% block brand %}Animadou{% endblock brand %}
+{% extends 'MsiCmfBundle:Page:layout.html.twig' %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ asset('bundles/msiadmin/vendor/bootstrap/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('bundles/animadooapp/css/style.css') }}">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ asset('bundles/animadouapp/css/style.css') }}">
 {% endblock css %}
 
 {% block js %}
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script src="{{ asset('bundles/msiadmin/vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
 {% endblock js %}
 
 {% block body %}
@@ -26,7 +25,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-                {{ knp_menu_render('AnimadooAppBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+                {#{{ knp_menu_render('AnimadouAppBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}#}
                 <a class="btn btn-primary pull-right" href="#">{{ 'appointment'|trans }}</a>
             </div>
         </div>
@@ -72,53 +71,6 @@
             </div>
         </div>
         <hr>
-        {#<div class="media">
-            <a class="pull-right" href="#">
-            <img class="media-object img-polaroid" src="http://placehold.it/256x200">
-            </a>
-            <div class="media-body">
-                <h3 class="media-heading">Promenade de chien</h3>
-                <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="span3">
-                <div class="well">
-                    <h4 class="lead">$15.00</h4>
-                    <ul>
-                        <li>Durée : 15 min</li>
-                        <li>Promenade privée</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="well">
-                    <h4 class="lead">$17.00</h4>
-                    <ul>
-                        <li>Durée : 30 min</li>
-                        <li>Promenade privée</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="well">
-                    <h4 class="lead">$20.00</h4>
-                    <ul>
-                        <li>Durée : 45 min</li>
-                        <li>Promenade privée</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="span3">
-                <div class="well">
-                    <h4 class="lead">$22.00</h4>
-                    <ul>
-                        <li>Durée : 1 h</li>
-                        <li>Promenade privée</li>
-                    </ul>
-                </div>
-            </div>
-        </div>#}
     </div>
     <div id="push"></div>
 </div>

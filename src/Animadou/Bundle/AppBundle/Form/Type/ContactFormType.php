@@ -1,6 +1,6 @@
 <?php
 
-namespace Animadoo\Bundle\AppBundle\Form\Type;
+namespace Animadou\Bundle\AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Animadoo\Bundle\AppBundle\Form\Handler;
+namespace Animadou\Bundle\AppBundle\Form\Handler;
 
 class ContactFormHandler
 {

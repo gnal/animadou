@@ -5,13 +5,8 @@
         "psr-0": { "": "src/" }
     },
     "repositories": [
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msiadminbundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msiuserbundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msimenubundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msiblockbundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msipagebundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msipaginatorbundle.git" },
-        { "type": "vcs", "url": "http://groupemsi.repositoryhosting.com/git_public/groupemsi/msisliderbundle.git" }
+        { "type": "vcs", "url": "https://github.com/gnal/MsiCmfBundle.git" },
+        { "type": "vcs", "url": "https://github.com/gnal/MsiUserBundle.git" }
     ],
     "require": {
         "php": ">=5.3.3",
@@ -33,13 +28,8 @@
         "friendsofsymfony/user-bundle": "dev-master",
         "knplabs/knp-menu-bundle": "dev-master",
 
-        "msi/admin-bundle": "dev-master",
-        "msi/user-bundle": "dev-master",
-        "msi/menu-bundle": "dev-master",
-        "msi/block-bundle": "dev-master",
-        "msi/page-bundle": "dev-master",
-        "msi/paginator-bundle": "dev-master",
-        "msi/slider-bundle": "dev-master"
+        "msi/cmf-bundle": "dev-master",
+        "msi/user-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

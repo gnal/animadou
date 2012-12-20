@@ -24,13 +24,10 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
 
-            new Msi\Bundle\AdminBundle\MsiAdminBundle(),
+            new Msi\Bundle\CmfBundle\MsiCmfBundle(),
             new Msi\Bundle\UserBundle\MsiUserBundle(),
-            new Msi\Bundle\PaginatorBundle\MsiPaginatorBundle(),
-            new Msi\Bundle\MenuBundle\MsiMenuBundle(),
-            new Msi\Bundle\PageBundle\MsiPageBundle(),
-            new Msi\Bundle\BlockBundle\MsiBlockBundle(),
-            new Animadoo\Bundle\AppBundle\AnimadooAppBundle(),
+
+            new Animadou\Bundle\AppBundle\AnimadouAppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
