@@ -14,27 +14,12 @@ a:hover {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar .brand {
+h1 {
     font-family: 'Trebuchet MS', sans-serif;
-    font-weight: bold;
 }
 
 h1 small {
     font-size: 17.5px;
-}
-
-h2 {
-    background
-}
-
-h4.lead {
-    text-align: center;
-    font-weight: bold;
-    font-size: 24.5px;
-}
-
-.text-center {
-    text-align: center;
 }
 
 /* header */
@@ -44,20 +29,18 @@ h4.lead {
 }
 
 #logo a {
-    text-transform: uppercase;
+    background: #404040;
+    color: #fff;
+    padding: 5px 15px;
 }
 
 /* content */
 
 .page-title {
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     padding: 5px 0;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border-bottom: 1px solid #d4d4d4;
-}
-
-.featured-services {
-    /*text-align: center;*/
 }
 
 /* footer */
@@ -110,7 +93,7 @@ h4.lead {
 
 .navbar .nav > li > a {
     font-weight: bold;
-    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+    background: url(/bundles/animadouapp/img/layout/nav_li_separator.png) no-repeat right;
 }
 
 .navbar .nav > li:last-child > a {
@@ -122,7 +105,7 @@ h4.lead {
 }
 
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
-    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+    background: url(/bundles/animadouapp/img/layout/nav_li_separator.png) no-repeat right;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -138,7 +121,7 @@ h4.lead {
 
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
     color: #08C;
-    background: url(/bundles/animadooapp/img/layout/nav_li_separator.png) no-repeat right;
+    background: url(/bundles/animadouapp/img/layout/nav_li_separator.png) no-repeat right;
 }
 
 .dropdown-menu .active > a, .dropdown-menu .active > a:hover {

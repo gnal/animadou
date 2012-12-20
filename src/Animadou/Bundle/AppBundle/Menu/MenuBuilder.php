@@ -28,7 +28,7 @@ class MenuBuilder extends ContainerAware
 
     protected function getMainMenu($factory)
     {
-        $root = $this->container->get('msi_menu.menu_root_manager')->findRootByName('main', $this->container->get('request')->getLocale());
+        $root = $this->container->get('msi_cmf.menu_root_manager')->findRootByName('main');
 
         if (!$root) {
             return $factory->createItem('default');

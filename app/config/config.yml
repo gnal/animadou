@@ -75,12 +75,18 @@ fos_user:
 msi_cmf:
     page:
         layouts:
-            'AnimadouAppBundle::layout.html.twig': 'default'
+            'AnimadouAppBundle::layout.html.twig': 'Default'
+            'AnimadouAppBundle::layout_with_sidebar.html.twig': 'With sidebar'
     block:
         actions:
             'MsiCmfBundle::layout.html.twig': 'Default'
         templates:
-            'MsiCmfBundle::layout.html.twig': 'Default'
+            'AnimadouAppBundle:Service:featured.html.twig': 'Service featured'
+            'AnimadouAppBundle:Testimonial:sample.html.twig': 'Testimonial sample'
         slots:
             content: Content
+            content_top: Content top
+            content_bottom: Content bottom
             sidebar: Sidebar
+            sidebar_top: Sidebar top
+            sidebar_bottom: Sidebar bottom
