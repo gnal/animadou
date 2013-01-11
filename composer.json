@@ -6,7 +6,8 @@
     },
     "repositories": [
         { "type": "vcs", "url": "https://github.com/gnal/MsiCmfBundle.git" },
-        { "type": "vcs", "url": "https://github.com/gnal/MsiUserBundle.git" }
+        { "type": "vcs", "url": "https://github.com/gnal/MsiUserBundle.git" },
+        { "type": "vcs", "url": "https://github.com/gnal/DoctrineBehaviors.git" }
     ],
     "require": {
         "php": ">=5.3.3",
