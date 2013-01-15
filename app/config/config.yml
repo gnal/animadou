@@ -68,7 +68,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Acme\Bundle\UserBundle\Entity\User
+    user_class: Animadou\Bundle\UserBundle\Entity\User
     group:
         group_class: Msi\UserBundle\Entity\Group
 
