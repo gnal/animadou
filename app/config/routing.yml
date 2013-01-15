@@ -19,7 +19,7 @@ fos_user_change_password:
 
 msi_cmf_routing:
     resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
-    prefix: /{_locale}/admin
+    prefix: /
 
 msi_cmf_page:
     resource: "@MsiCmfBundle/Resources/config/routing/page.yml"

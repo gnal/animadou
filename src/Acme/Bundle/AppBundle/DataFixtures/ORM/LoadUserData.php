@@ -1,6 +1,6 @@
 <?php
 
-namespace Animadou\Bundle\AppBundle\DataFixtures\ORM;
+namespace Acme\Bundle\AppBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\AbstractFixture;
