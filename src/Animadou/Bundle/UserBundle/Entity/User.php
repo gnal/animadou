@@ -24,10 +24,29 @@ class User extends BaseUser
      */
     protected $groups;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
+     * )
+     */
+    protected $operators;
+
     public function __construct()
     {
         parent::__construct();
         $this->groups = new ArrayCollection();
+        $this->operators = new ArrayCollection();
+    }
+
+    public function getOperators()
+    {
+        return $this->operators;
+    }
+
+    public function setOperators($operators)
+    {
+        $this->operators = $operators;
+
+        return $this;
     }
 
     public function getGroups()

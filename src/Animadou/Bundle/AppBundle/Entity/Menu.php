@@ -44,5 +44,5 @@ class Menu extends BaseMenu
      * @ORM\ManyToMany(targetEntity="Msi\UserBundle\Entity\Group")
      * )
      */
-    protected $whitelist;
+    protected $operators;
 }
