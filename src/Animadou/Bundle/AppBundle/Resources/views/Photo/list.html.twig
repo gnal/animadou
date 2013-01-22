@@ -1,0 +1,7 @@
+{% extends 'AnimadouAppBundle::layout.html.twig' %}
+
+{% block content %}
+    {% for album in albums %}
+        <a href="{{ path('animadou_app_photo_show', {'id': album.id}) }}">{{ album.name }}</a>
+    {% endfor %}
+{% endblock content %}

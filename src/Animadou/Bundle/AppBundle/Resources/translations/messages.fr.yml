@@ -1,0 +1,3 @@
+entity:
+    Album: Album|Albums
+    Photo: Photo|Photos
