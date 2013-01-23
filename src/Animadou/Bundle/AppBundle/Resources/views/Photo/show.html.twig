@@ -1,7 +1,36 @@
 {% extends 'AnimadouAppBundle::layout.html.twig' %}
 
 {% block content %}
-    {% for photo in album.photos %}
-        <img class="img-polaroid" src="{{ asset('uploads/photo/'~album.id~'/'~photo.filename) }}" alt="0">
-    {% endfor %}
+    <div id="slider" class="img-polaroid">
+        <div class="slider-wrap">
+        <ul class="slider">
+            {% for photo in album.photos %}
+                <li><div><img onload="nl(this);" class="hide" src="{{ photo.pathname }}" alt="0"></div></li>
+            {% endfor %}
+        </ul>
+        </div>
+        <div class="carousel-wrap">
+        <a class="control control-next" data-direction="next" href="#"><i class="icon-chevron-down"></i></a>
+        <a class="control control-prev" href="#"><i class="icon-chevron-up"></i></a>
+        <ul class="carousel">
+            {% for photo in album.photos %}
+                <li><img onload="nl(this);" src="{{ photo.pathname('t') }}" alt="0"></li>
+            {% endfor %}
+        </ul>
+        </div>
+        <div class="clearfix"></div>
+    </div>
 {% endblock content %}
+
+{% block js %}
+{{ parent() }}
+<script src="{{ asset('bundles/animadouapp/vendor/msi-slider/js/msi-slider.js') }}"></script>
+<script>
+$('div#slider').msiSlider({
+    axis: 'y',
+    pauseTime: 3000,
+    carouselLiDimension: 108,
+    sliderSpeed: 1,
+});
+</script>
+{% endblock js %}

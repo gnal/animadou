@@ -176,3 +176,90 @@ body {
     box-shadow: 0 0 0 1px #808080;
     background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
 }
+
+/* photo show */
+
+.control {
+    position:absolute;
+    z-index: 5000;
+    display: block;
+    width: 108px;
+    text-align: center;
+    padding: 8px 0;
+    background: #cbcbcb;
+}
+
+.control-prev {
+    top: 0;
+}
+
+.control-next {
+    bottom: 0;
+}
+
+#slider {
+    margin-bottom: 20px;
+/*    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: #404040;*/
+    /*padding: 10px;*/
+    margin-left: auto;
+    margin-right: auto;
+    width: 658px;
+}
+
+#slider ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+#slider .slider-wrap {
+    height: 540px;
+    width: 540px;
+    float: left;
+}
+
+#slider .slider {
+    position: relative;
+}
+
+#slider .slider > li {
+    position: absolute;
+    height: 540px;
+    width: 540px;
+    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
+}
+
+#slider .slider > li > div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 540px;
+    width: 540px;
+}
+
+#slider .carousel-wrap {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 108px;
+    height: 540px;
+    margin-left: 10px;
+}
+
+#slider .carousel {
+    position: relative;
+    /* height/width: 9999px; isnt necessary but it avoids that we see the li under for a second before javascript resizes ( only if carousel wrap has padding or greater height that li ) */
+    height: 9999px;
+}
+
+#slider .carousel > li {
+    width: 108px;
+    height: 108px;
+    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
+}
+
+.ui-effects-wrapper {
+    position: absolute !important;
+}
