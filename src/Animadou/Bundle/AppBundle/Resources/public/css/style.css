@@ -62,6 +62,11 @@ h1 small {
     float: right;
 }
 
+.nav-pills > .active > a, .nav-pills > .active > a:hover {
+    background: #f0f0f0;
+    color: inherit;
+}
+
 #logo a {
     /*background: #000;*/
     color: #fff;
