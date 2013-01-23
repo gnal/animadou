@@ -10,8 +10,8 @@
         </ul>
         </div>
         <div class="carousel-wrap">
-        <a class="control control-next" data-direction="next" href="#"><i class="icon-white icon-chevron-down"></i></a>
-        <a class="control control-prev" href="#"><i class="icon-white icon-chevron-up"></i></a>
+        <a class="control control-next" href="#"><i class="icon-white icon-chevron-down"></i></a>
+        <a class="control control-prev" data-direction="next" href="#"><i class="icon-white icon-chevron-up"></i></a>
         <ul class="carousel">
             {% for photo in album.photos %}
                 <li><img onload="nl(this);" src="{{ photo.pathname('t') }}" alt="0"></li>
