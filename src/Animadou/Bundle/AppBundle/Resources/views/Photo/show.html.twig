@@ -1,5 +1,9 @@
 {% extends 'AnimadouAppBundle::layout.html.twig' %}
 
+{% block title %}
+{{ album.name }} <span class="muted">({{ album.photos.count }})</span>
+{% endblock title %}
+
 {% block content %}
     <div id="slider" class="img-polaroid">
         <div class="slider-wrap">
