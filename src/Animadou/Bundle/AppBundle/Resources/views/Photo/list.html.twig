@@ -6,7 +6,7 @@
     <div class="span3">
         <a class="album" href="{{ path('animadou_app_photo_show', {'id': album.id}) }}">
             <div>
-                <img onload="nl(this);" class="hide img-rounded" src="{{ asset('uploads/photo/'~album.id~'/'~album.photos.first.filename) }}" alt="0">
+                <img onload="nl(this);" class="hide img-rounded" src="{{ album.photos.first.pathname('a') }}" alt="0">
             </div>
             {{ album.name }} <span class="muted">({{ album.photos.count }})</span>
         </a>

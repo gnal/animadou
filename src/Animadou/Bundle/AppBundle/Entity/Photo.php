@@ -39,6 +39,7 @@ class Photo implements UploadableInterface, TimestampableInterface
 
         $cutter->resizeProp(540)->save();
         $cutter->resize(114, 114)->save('t');
+        $cutter->resize(200, 120)->save('a');
     }
 
     public function getAlbum()
