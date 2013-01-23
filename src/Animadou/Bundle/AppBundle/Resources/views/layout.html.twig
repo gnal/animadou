@@ -4,6 +4,10 @@
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ asset('bundles/animadouapp/css/style.css') }}">
+
+<script>
+function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),'');}
+</script>
 {% endblock css %}
 
 {% block js %}

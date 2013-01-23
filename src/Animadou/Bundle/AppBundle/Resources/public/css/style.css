@@ -148,4 +148,31 @@ body {
     height: 81px;
 }
 
-style
+/* photo gallery */
+
+.album {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.album .muted {
+    color: #808080;
+}
+
+.album:hover {
+    background: #cbcbcb;
+}
+
+.album div {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    height: 120px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 0 1px #808080;
+    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
+}

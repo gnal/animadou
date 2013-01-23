@@ -2,6 +2,15 @@
 
 {% block content %}
     {% for album in albums %}
-        <a href="{{ path('animadou_app_photo_show', {'id': album.id}) }}">{{ album.name }}</a>
+    {% if loop.index == 1 or loop.index % 4 == 1 %}<div class="row">{% endif %}
+    <div class="span3">
+        <a class="album" href="{{ path('animadou_app_photo_show', {'id': album.id}) }}">
+            <div>
+                <img onload="nl(this);" class="hide img-rounded" src="{{ asset('uploads/photo/'~album.id~'/'~album.photos.first.filename) }}" alt="0">
+            </div>
+            {{ album.name }} <span class="muted">({{ album.photos.count }})</span>
+        </a>
+    </div>
+    {% if loop.index == albums|length or loop.index % 4 == 0 %}</div>{% endif %}
     {% endfor %}
 {% endblock content %}
