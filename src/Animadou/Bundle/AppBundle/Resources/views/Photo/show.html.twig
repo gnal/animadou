@@ -9,7 +9,7 @@
         <div class="slider-wrap">
         <ul class="slider">
             {% for photo in album.photos %}
-                <li><div><img onload="nl(this);" class="hide" src="{{ photo.pathname }}" alt="0"></div></li>
+                <li><div><img oncontextmenu="return false;" onload="nl(this);" class="hide" src="{{ photo.pathname }}" alt="0"></div></li>
             {% endfor %}
         </ul>
         </div>
@@ -18,7 +18,7 @@
         <a class="control control-prev" data-direction="next" href="#"><i class="icon-white icon-chevron-up"></i></a>
         <ul class="carousel">
             {% for photo in album.photos %}
-                <li><img onload="nl(this);" src="{{ photo.pathname('t') }}" alt="0"></li>
+                <li><img oncontextmenu="return false;" onload="nl(this);" src="{{ photo.pathname('t') }}" alt="0"></li>
             {% endfor %}
         </ul>
         </div>
