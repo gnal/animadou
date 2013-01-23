@@ -35,7 +35,7 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
             </div>
         </div>
     </div>
-    {% if page.home != true %}
+    {% if page.showTitle == true %}
     <div class="page-title">
         <div class="container">
             <h2>{{ block('title') }}</h2>
