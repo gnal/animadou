@@ -19,21 +19,23 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
 <div id="wrap">
     <div class="header">
         <div class="container">
+            <div class="header-inner">
             <div class="pull-right">
                 <a class="btn" href="{{ path('msi_page_home', {'_locale': app.request.locale == 'en' ? 'fr' : 'en'}) }}">{{ app.request.locale == 'en' ? 'Français' : 'English' }}</a>
             </div>
             <h1 id="logo"><a href="{{ path('msi_page_home') }}"><img src="http://mootools.net/assets/images/mootools.png" alt="0"></a></h1>
             <img src="http://mootools.net/assets/images/subtitle.png" alt="0">
-        </div>
-    </div>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                {{ knp_menu_render('AnimadouAppBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
-                <a class="btn pull-right" href="#">{{ 'appointment'|trans }}</a>
             </div>
         </div>
-    </div>
+    </div><div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+
+                {{ knp_menu_render('AnimadouAppBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+                <a class="btn pull-right" href="#">{{ 'appointment'|trans }}</a>
+
+        </div>
+    </div></div>
     {% if page.showTitle == true %}
     <div class="page-title">
         <div class="container">
