@@ -254,7 +254,6 @@ body {
 /*    margin-left: auto;
     margin-right: auto;
     width: 660px;*/
-    float: left;
     background: #000;
     box-shadow: 0 5px 25px 0 #000;
     /*padding: 5px;*/
@@ -267,7 +266,7 @@ body {
 
 #slider .slider-wrap {
     height: 540px;
-    width: 540px;
+    width: 816px;
     float: left;
 }
 
@@ -278,7 +277,7 @@ body {
 #slider .slider > li {
     position: absolute;
     height: 540px;
-    width: 540px;
+    width: 816px;
     background: url(/uploads/images/ajax-loader.gif) no-repeat center center #000;
 }
 
@@ -287,7 +286,7 @@ body {
     vertical-align: middle;
     text-align: center;
     height: 540px;
-    width: 540px;
+    width: 816px;
 }
 
 #slider .carousel-wrap {
