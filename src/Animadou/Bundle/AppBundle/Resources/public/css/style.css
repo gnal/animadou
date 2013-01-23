@@ -200,9 +200,10 @@ body {
 
 #slider {
     margin-bottom: 20px;
-    margin-left: auto;
+/*    margin-left: auto;
     margin-right: auto;
-    width: 660px;
+    width: 660px;*/
+    float: left;
     background: #535353;
 }
 
