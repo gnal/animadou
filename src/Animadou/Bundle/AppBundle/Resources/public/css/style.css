@@ -3,8 +3,7 @@ html {
 }
 
 body {
-    /*font-family: 'Open Sans', sans-serif;*/
-    font-family: 'Capriola', sans-serif;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
 a {
@@ -17,6 +16,7 @@ a:hover {
 
 h1 {
     /*font-family: 'Trebuchet MS', sans-serif;*/
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
 }
 
 h1 small {
