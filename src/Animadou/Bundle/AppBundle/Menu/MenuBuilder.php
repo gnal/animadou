@@ -11,7 +11,7 @@ class MenuBuilder extends ContainerAware
     {
         $menu = $this->getMainMenu($factory);
 
-        $menu->setChildrenAttribute('class', 'nav');
+        $menu->setChildrenAttribute('class', 'menu');
         $this->setDropdownMenuAttributes($menu);
 
         foreach ($menu as $row) {
