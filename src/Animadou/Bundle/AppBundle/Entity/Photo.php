@@ -28,22 +28,17 @@ class Photo implements UploadableInterface, TimestampableInterface
      */
     protected $album;
 
-    public function processFile(\SplFileInfo $file)
-    {
-        $cutter = new Cutter();
-
-        $cutter->setFile($file)->resizeProp(540)->save();
-        $cutter->setFile($file)->resize(114, 114)->save('t');
-    }
-
     public function getUploadDir()
     {
         return 'photo/'.$this->getAlbum()->getId();
     }
 
-    public function getAllowedExt()
+    public function processFile(\SplFileInfo $file)
     {
-        return ['jpg', 'jpeg', 'png'];
+        $cutter = new Cutter($file);
+
+        $cutter->resizeProp(540)->save();
+        $cutter->resize(114, 114)->save('t');
     }
 
     public function getAlbum()
@@ -61,5 +56,10 @@ class Photo implements UploadableInterface, TimestampableInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    public function __toString()
+    {
+        return (string) '#'.$this->id;
     }
 }
