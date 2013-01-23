@@ -17,6 +17,7 @@ a:hover {
 h1 {
     font-family: 'Trebuchet MS', sans-serif;
     /*font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;*/
+    margin-bottom: 0;
 }
 
 h1 small {
@@ -32,9 +33,9 @@ h1 small {
 }
 
 #logo a {
-    background: #000;
+    /*background: #000;*/
     color: #fff;
-    padding: 5px 15px;
+    /*padding: 5px 15px;*/
 }
 
 /* content */
