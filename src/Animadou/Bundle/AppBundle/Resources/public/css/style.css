@@ -183,10 +183,10 @@ body {
     position:absolute;
     z-index: 5000;
     display: block;
-    width: 108px;
+    width: 114px;
     text-align: center;
     padding: 8px 0;
-    background: #cbcbcb;
+    background: #000;
 }
 
 .control-prev {
@@ -199,14 +199,10 @@ body {
 
 #slider {
     margin-bottom: 20px;
-/*    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    background: #404040;*/
-    /*padding: 10px;*/
     margin-left: auto;
     margin-right: auto;
-    width: 658px;
+    width: 660px;
+    background: #535353;
 }
 
 #slider ul {
@@ -228,7 +224,7 @@ body {
     position: absolute;
     height: 540px;
     width: 540px;
-    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
+    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #000;
 }
 
 #slider .slider > li > div {
@@ -243,9 +239,10 @@ body {
     overflow: hidden;
     position: relative;
     float: left;
-    width: 108px;
-    height: 540px;
-    margin-left: 10px;
+    width: 114px;
+    height: 468px;
+    margin-left: 5px;
+    padding: 36px 0;
 }
 
 #slider .carousel {
@@ -255,8 +252,9 @@ body {
 }
 
 #slider .carousel > li {
-    width: 108px;
-    height: 108px;
+    width: 114px;
+    height: 114px;
+    margin-bottom: 4px;
     background: url(/uploads/images/ajax-loader.gif) no-repeat center center #cbcbcb;
 }
 

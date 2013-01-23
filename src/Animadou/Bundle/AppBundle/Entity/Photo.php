@@ -33,7 +33,7 @@ class Photo implements UploadableInterface, TimestampableInterface
         $cutter = new Cutter();
 
         $cutter->setFile($file)->resizeProp(540)->save();
-        $cutter->setFile($file)->resize(108, 108)->save('t');
+        $cutter->setFile($file)->resize(114, 114)->save('t');
     }
 
     public function getUploadDir()
