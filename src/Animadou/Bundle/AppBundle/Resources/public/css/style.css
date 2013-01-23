@@ -63,7 +63,7 @@ h1 small {
 }
 
 .nav-pills > .active > a, .nav-pills > .active > a:hover {
-    background: #f0f0f0;
+    background: #eeeeee;
     color: inherit;
 }
 
