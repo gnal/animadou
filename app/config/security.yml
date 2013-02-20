@@ -62,8 +62,6 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/(fr|en)/admin/, role: ROLE_ADMIN }
 
-        - { path: ^/, role: ROLE_ADMIN }
-
     role_hierarchy:
         ROLE_MANAGER:     ROLE_USER
         ROLE_ADMIN:       ROLE_MANAGER
