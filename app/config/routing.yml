@@ -1,5 +1,6 @@
-animadou_app:
-    resource: "@AnimadouAppBundle/Resources/config/routing.yml"
+ani_core:
+    resource: "@AniCoreBundle/Resources/config/routing.yml"
+    prefix:   /
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

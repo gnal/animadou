@@ -1,0 +1,7 @@
+parameters:
+#    ani_core.example.class: Ani\CoreBundle\Example
+
+services:
+#    ani_core.example:
+#        class: %ani_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,7 +1,0 @@
-animadou_app_photo_list:
-    pattern: /{_locale}/photo
-    defaults: { _controller: AnimadouAppBundle:Photo:list }
-
-animadou_app_photo_show:
-    pattern: /{_locale}/photo/{id}
-    defaults: { _controller: AnimadouAppBundle:Photo:show }

@@ -26,13 +26,12 @@ class AppKernel extends Kernel
 
             new Msi\CmfBundle\MsiCmfBundle(),
             new Msi\UserBundle\MsiUserBundle(),
-
-            new Animadou\Bundle\AppBundle\AnimadouAppBundle(),
-            new Animadou\Bundle\UserBundle\AnimadouUserBundle(),
+            new Acme\UserBundle\AcmeUserBundle(),
+            new Ani\CoreBundle\AniCoreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-            $bundles[] = new Acme\Bundle\AppBundle\AcmeAppBundle();
+            $bundles[] = new Acme\AppBundle\AcmeAppBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();

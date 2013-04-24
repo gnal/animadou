@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: doctrine_extensions.yml }
-    - { resource: admin.yml }
 
 framework:
     #esi:             ~
@@ -69,16 +68,24 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Animadou\Bundle\UserBundle\Entity\User
+    user_class: Acme\UserBundle\Entity\User
     group:
         group_class: Msi\UserBundle\Entity\Group
+    registration:
+        form:
+            type: msi_user_registration
+    profile:
+        form:
+            type: msi_user_profile
 
 msi_cmf:
-    site_class: Animadou\Bundle\AppBundle\Entity\Site
-    menu_class: Animadou\Bundle\AppBundle\Entity\Menu
-    page_class: Animadou\Bundle\AppBundle\Entity\Page
-    block_class: Animadou\Bundle\AppBundle\Entity\Block
+    site_class: Acme\AppBundle\Entity\Site
+    menu_class: Acme\AppBundle\Entity\Menu
+    page_class: Acme\AppBundle\Entity\Page
+    block_class: Acme\AppBundle\Entity\Block
     page_layouts:
-        'AnimadouAppBundle::layout.html.twig': 'Default'
+        'AcmeAppBundle::layout.html.twig': 'Default'
     block_slots:
         content: Contenu
+    block_actions:
+        'AcmeAppBundle:SomeController:someAction': 'someAction'
