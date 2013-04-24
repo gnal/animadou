@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
-use Acme\AppBundle\Entity\Menu;
+use Ani\CmfBundle\Entity\Menu;
 
 class LoadMenuData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {

@@ -68,7 +68,7 @@ swiftmailer:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: Acme\UserBundle\Entity\User
+    user_class: Ani\UserBundle\Entity\User
     group:
         group_class: Msi\UserBundle\Entity\Group
     registration:
@@ -79,12 +79,12 @@ fos_user:
             type: msi_user_profile
 
 msi_cmf:
-    site_class: Acme\AppBundle\Entity\Site
-    menu_class: Acme\AppBundle\Entity\Menu
-    page_class: Acme\AppBundle\Entity\Page
-    block_class: Acme\AppBundle\Entity\Block
+    site_class: Ani\AppBundle\Entity\Site
+    menu_class: Ani\AppBundle\Entity\Menu
+    page_class: Ani\AppBundle\Entity\Page
+    block_class: Ani\AppBundle\Entity\Block
     page_layouts:
-        'AcmeAppBundle::layout.html.twig': 'Default'
+        'AniCoreBundle::layout.html.twig': 'Default'
     block_slots:
         content: Contenu
     block_actions:

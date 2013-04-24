@@ -1,0 +1,7 @@
+parameters:
+#    ani_cmf.example.class: Ani\CmfBundle\Example
+
+services:
+#    ani_cmf.example:
+#        class: %ani_cmf.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
