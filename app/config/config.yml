@@ -79,10 +79,10 @@ fos_user:
             type: msi_user_profile
 
 msi_cmf:
-    site_class: Ani\AppBundle\Entity\Site
-    menu_class: Ani\AppBundle\Entity\Menu
-    page_class: Ani\AppBundle\Entity\Page
-    block_class: Ani\AppBundle\Entity\Block
+    site_class: Ani\CmfBundle\Entity\Site
+    menu_class: Ani\CmfBundle\Entity\Menu
+    page_class: Ani\CmfBundle\Entity\Page
+    block_class: Ani\CmfBundle\Entity\Block
     page_layouts:
         'AniCoreBundle::layout.html.twig': 'Default'
     block_slots:
