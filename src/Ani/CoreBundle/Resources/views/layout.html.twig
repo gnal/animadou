@@ -99,11 +99,11 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
                     </ul>
                 </div>
             </div>
+            <div class="clearfix"></div>
             {% endif %}
             <div class="content">
-                <h2>Welcome</h2>
-                <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
-                <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat. Aenean id nisl vel nisl sodales pharetra. Nam bibendum ipsum sed risus condimentum congue. In erat lacus, vestibulum quis pulvinar a, placerat sed tortor. Proin pellentesque nibh nulla. Donec elit nunc, iaculis ac interdum sed, lacinia quis tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed malesuada enim ut lectus sagittis facilisis.</p>
+                {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
+                {{ block('page_content') }}
             </div>
         </div>
     </div>

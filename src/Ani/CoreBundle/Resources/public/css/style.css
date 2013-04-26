@@ -35,7 +35,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bba70', end
 h1 a {
     display: block;
     color: #fff;
-    height: 43px;
+    height: 44px;
     padding: 78px 0;
     border-bottom: 1px solid #111111;
     text-indent: -9999px;
@@ -48,7 +48,6 @@ h1 a:hover {
 
 h2 {
     color: #6d0019;
-    margin-top: 0;
 }
 
 .container {
@@ -57,7 +56,7 @@ h2 {
 }
 
 .content {
-    padding: 20px;
+    padding: 0 20px;
 }
 
 .footer {
@@ -100,17 +99,17 @@ ul.navigation > li > a:hover {
 /* msi-slider */
 
 #slider {
-    border-bottom: 1px solid #111111;
-    background: #111111;
+    position: relative;
 }
 
 #slider ul.slider {
     position: relative;
-    height: 199px;
-    width: 539px;
+    height: 200px;
+    width: 640px;
     margin: 0;
     float: left;
-    border-right: 1px solid #111111;
+    background: #111111;
+    border-bottom: 1px solid #111111;
 }
 
 #slider ul.slider > li {
@@ -120,7 +119,9 @@ ul.navigation > li > a:hover {
 #slider div.carousel-wrap {
     overflow: hidden;
     width: 100px;
-    height: 199px;
+    height: 200px;
+    visibility: hidden;
+    position: absolute;
 }
 
 #slider ul.carousel {
