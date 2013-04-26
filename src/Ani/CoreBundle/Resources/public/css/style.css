@@ -1,0 +1,135 @@
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #333333;
+    font-family: 'Open Sans';
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    background: #a90329; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* IE10+ */
+    background: linear-gradient(135deg,  #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    color: #fff;
+    margin: 0;
+    text-align: center;
+}
+
+h1 a {
+    display: block;
+    color: #fff;
+    height: 43px;
+    padding: 78px 0;
+    border-bottom: 1px solid #111111;
+}
+
+h1 a:hover {
+    color: #fff;
+}
+
+h2 {
+    color: #6d0019;
+    margin-top: 0;
+}
+
+.container {
+    box-shadow: 0 0 10px 1px #111111;
+    background: url(/uploads/images/bg.png) repeat-y;
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    background: #111111;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.topbar {
+    background: #111111;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+ul.navigation {
+    list-style: none;
+    margin: 0;
+}
+
+ul.navigation > li > a {
+    display: block;
+    background: #111111;
+    color: #fff;
+    padding: 8px 20px;
+}
+
+ul.navigation > li:last-child > a {
+    padding: 8px 20px 16px;
+}
+
+ul.navigation > li:first-child > a {
+    padding: 16px 20px 8px;
+}
+
+ul.navigation > li > a:hover {
+    color: #6d0019;
+}
+
+/* msi-slider */
+
+#slider {
+    border-bottom: 1px solid #111111;
+    background: #111111;
+}
+
+#slider ul.slider {
+    position: relative;
+    height: 199px;
+    width: 539px;
+    margin: 0;
+    float: left;
+    border-right: 1px solid #111111;
+}
+
+#slider ul.slider > li {
+    position: absolute;
+}
+
+#slider div.carousel-wrap {
+    overflow: hidden;
+    width: 100px;
+    height: 199px;
+}
+
+#slider ul.carousel {
+    position: relative;
+    margin: 0;
+}
+
+#slider ul.carousel > li {
+    width: 100px;
+    height: 49px;
+    margin-bottom: 1px;
+}
+
+.ui-effects-wrapper {
+    position: absolute !important;
+}

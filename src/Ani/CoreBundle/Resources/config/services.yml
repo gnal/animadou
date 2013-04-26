@@ -2,6 +2,17 @@ parameters:
 #    ani_core.example.class: Ani\CoreBundle\Example
 
 services:
-#    ani_core.example:
-#        class: %ani_core.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    # PageSlide
+    ani_core_page_slide_admin:
+        class: Ani\CoreBundle\Admin\PageSlideAdmin
+        arguments: [ @ani_core.page_slide_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+        calls:
+            - [setParent, [@msi_cmf_page_admin]]
+
+    ani_core.page_slide_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ Ani\CoreBundle\Entity\PageSlide ]
+        parent: msi_cmf.manager
