@@ -16,3 +16,14 @@ services:
         class: %msi_cmf.manager.class%
         arguments: [ Ani\CoreBundle\Entity\PageSlide ]
         parent: msi_cmf.manager
+
+    # Overwriting page from cmf ...
+    msi_cmf_page_admin:
+        class: %msi_cmf.page.admin%
+        arguments: [ @msi_cmf.page_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+        calls:
+            - [addChild, [@msi_cmf_block_admin]]
+            - [addChild, [@ani_core_page_slide_admin]]
