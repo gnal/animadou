@@ -8,6 +8,7 @@ body {
 }
 
 a {
+    color: #457719;
     text-decoration: none;
 }
 
@@ -16,16 +17,14 @@ a:hover {
 }
 
 h1 {
-background: #2c539e; /* Old browsers */
-background: -moz-linear-gradient(left,  #2c539e 0%, #2c539e 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,#2c539e), color-stop(100%,#2c539e)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  #2c539e 0%,#2c539e 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  #2c539e 0%,#2c539e 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  #2c539e 0%,#2c539e 100%); /* IE10+ */
-background: linear-gradient(to right,  #2c539e 0%,#2c539e 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c539e', endColorstr='#2c539e',GradientType=1 ); /* IE6-9 */
-
-
+background: #457719; /* Old browsers */
+background: -moz-linear-gradient(left,  #457719 0%, #457719 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#457719), color-stop(100%,#457719)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #457719 0%,#457719 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #457719 0%,#457719 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #457719 0%,#457719 100%); /* IE10+ */
+background: linear-gradient(to right,  #457719 0%,#457719 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#457719', endColorstr='#457719',GradientType=1 ); /* IE6-9 */
 
     color: #fff;
     margin: 0;
@@ -39,7 +38,7 @@ h1 a {
     padding: 85px 0;
     border-bottom: 1px solid #111111;
     text-indent: -9999px;
-    background: url(/uploads/images/logo.png) no-repeat center center;
+    background: url(/uploads/images/logo_base.png) no-repeat center center;
 }
 
 h1 a:hover {
@@ -47,7 +46,8 @@ h1 a:hover {
 }
 
 h2 {
-    color: #2c539e;
+    color: #457719;
+    font-weight: normal;
 }
 
 .container {
@@ -93,7 +93,7 @@ ul.navigation > li:first-child > a {
 }
 
 ul.navigation > li > a:hover {
-    color: #2c539e;
+    color: #457719;
 }
 
 /* msi-slider */
