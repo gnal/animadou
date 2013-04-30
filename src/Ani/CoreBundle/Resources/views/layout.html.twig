@@ -36,69 +36,48 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
 
 {% block body %}
 <div class="container">
-    <div class="topbar">
-        english
+    <div class="header">
+    <div class="row">
+        <div class="span6">
+            <h1><a href="{{ path('msi_page_home') }}"><img width=200 src="/uploads/images/logo_black.png" alt="0"></a></h1>
+        </div>
+        <div class="span6">
+            {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 2, 'currentClass': 'active'}) }}
+        </div>
     </div>
-    {#<div class="header">
-        <div class="row">
-            <div class="span4">
-                <h1><a href="{{ path('msi_page_home') }}">Animadou</a></h1>
-            </div>
-            <div class="span8" style="margin-left: 0;width: 640px;">
-                <div id=slider>
-                    <ul class="unstyled slider">
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/539/199" alt="0"></li>
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/539/199" alt="0"></li>
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/539/199" alt="0"></li>
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/539/199" alt="0"></li>
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/539/199" alt="0"></li>
-                        <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/539/199" alt="0"></li>
-                    </ul>
-                    <div class="carousel-wrap">
-                        <ul class="unstyled carousel">
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/100/49" alt="0"></li>
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/100/49" alt="0"></li>
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/100/49" alt="0"></li>
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/100/49" alt="0"></li>
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/100/49" alt="0"></li>
-                            <li><img class="hide" onload="nl(this);" src="http://placekitten.com/g/100/49" alt="0"></li>
+    </div>
+    <div class="content">
+        {% if page.slides.count %}
+            <div class="row">
+                <div class="span5">
+                    <div class="slider-text">
+                        <h2>Express Help For Your Pets!</h2>
+                        <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat.</p>
+                        <p>&bull; &bull; &bull;</p>
+                    </div>
+                </div>
+                <div class="span7" style="margin-left: 0;width: 560px;">
+                    <div id=slider>
+                        <ul class="unstyled slider">
+                            {% for slide in page.slides %}
+                                <li><img class="hide" onload="nl(this);" src="{{ slide.pathname }}" alt="0"></li>
+                            {% endfor %}
                         </ul>
+                        <div class="carousel-wrap">
+                            <ul class="unstyled carousel">
+                                {% for slide in page.slides %}
+                                    <li><img class="hide" onload="nl(this);" src="{{ slide.pathname('t') }}" alt="0"></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>#}
-    <div class="row">
-        <div class="span4">
-            <div class="sidebar">
-                <h1><a href="{{ path('msi_page_home') }}">Animadou</a></h1>
-                {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 2, 'currentClass': 'active'}) }}
-            </div>
-        </div>
-        <div class="span8" style="margin-left: 0;width: 640px;">
-            {% if page.slides.count %}
-            <div id=slider>
-                <ul class="unstyled slider">
-                    {% for slide in page.slides %}
-                        <li><img class="hide" onload="nl(this);" src="{{ slide.pathname }}" alt="0"></li>
-                    {% endfor %}
-                </ul>
-                <div class="carousel-wrap">
-                    <ul class="unstyled carousel">
-                        {% for slide in page.slides %}
-                            <li><img class="hide" onload="nl(this);" src="{{ slide.pathname('t') }}" alt="0"></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            {% endif %}
-            <div class="content">
-                {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
-                {{ block('page_content') }}
-            </div>
-        </div>
+        {% endif %}
+        {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
+        {{ block('page_content') }}
     </div>
+    <hr>
     <div class="footer">
         <small>&copy; {{ 'now'|date('Y') }} Animadou. All rights reserved.</small>
     </div>

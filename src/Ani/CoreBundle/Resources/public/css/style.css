@@ -3,12 +3,17 @@ html {
 }
 
 body {
-    background: #333333;
+    background: #e4e4e4;
     font-family: 'Open Sans';
 }
 
+.container {
+    background: #fff;
+    padding: 0 20px;
+}
+
 a {
-    color: #457719;
+    color: #4ba6af;
     text-decoration: none;
 }
 
@@ -17,59 +22,29 @@ a:hover {
 }
 
 h1 {
-background: #457719; /* Old browsers */
-background: -moz-linear-gradient(left,  #457719 0%, #457719 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, right top, color-stop(0%,#457719), color-stop(100%,#457719)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(left,  #457719 0%,#457719 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(left,  #457719 0%,#457719 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(left,  #457719 0%,#457719 100%); /* IE10+ */
-background: linear-gradient(to right,  #457719 0%,#457719 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#457719', endColorstr='#457719',GradientType=1 ); /* IE6-9 */
-
-    color: #fff;
     margin: 0;
-    text-align: center;
 }
 
 h1 a {
-    display: block;
-    color: #fff;
-    height: 44px;
-    padding: 85px 0;
-    border-bottom: 1px solid #111111;
-    text-indent: -9999px;
-    background: url(/uploads/images/logo_base.png) no-repeat center center;
+    color: #333;
 }
 
 h1 a:hover {
-    color: #fff;
+    color: #333;
 }
 
 h2 {
-    color: #457719;
     font-weight: normal;
 }
 
-.container {
-    box-shadow: 0 0 10px 1px #111111;
-    background: url(/uploads/images/bg.png) repeat-y;
-}
-
-.content {
-    padding: 0 20px;
+.header {
+    padding: 30px 0;
 }
 
 .footer {
-    background: #111111;
+    background: #666666;
     color: #fff;
     padding: 30px 20px;
-}
-
-.topbar {
-    background: #111111;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: right;
 }
 
 ul.navigation {
@@ -79,7 +54,7 @@ ul.navigation {
 
 ul.navigation > li > a {
     display: block;
-    background: #111111;
+    background: #666666;
     color: #fff;
     padding: 8px 20px;
 }
@@ -93,7 +68,7 @@ ul.navigation > li:first-child > a {
 }
 
 ul.navigation > li > a:hover {
-    color: #457719;
+    color: #4ba6af;
 }
 
 /* msi-slider */
@@ -104,12 +79,11 @@ ul.navigation > li > a:hover {
 
 #slider ul.slider {
     position: relative;
-    height: 214px;
-    width: 640px;
+    height: 280px;
+    width: 560px;
     margin: 0;
     float: left;
-    background: #111111;
-    border-bottom: 1px solid #111111;
+    background: #666666;
 }
 
 #slider ul.slider > li {
@@ -119,7 +93,7 @@ ul.navigation > li > a:hover {
 #slider div.carousel-wrap {
     overflow: hidden;
     width: 100px;
-    height: 214px;
+    height: 280px;
     visibility: hidden;
     position: absolute;
 }
@@ -137,4 +111,17 @@ ul.navigation > li > a:hover {
 
 .ui-effects-wrapper {
     position: absolute !important;
+}
+
+
+
+
+
+
+.slider-text {
+    background: #4ba6af;
+    height: 220px;
+    text-align: center;
+    padding: 30px 20px;
+    color: #fff;
 }

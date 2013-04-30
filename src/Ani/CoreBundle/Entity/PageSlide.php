@@ -54,7 +54,7 @@ class PageSlide implements TimestampableInterface, UploadableInterface
     {
         $cutter = new Cutter($file);
 
-        $cutter->resize(640, 214)->save();
+        $cutter->resize(560, 280)->save();
     }
 
     public function getPage()
