@@ -21,8 +21,20 @@ a:hover {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Trebuchet MS';
+}
+
 h1 {
     margin: 0;
+}
+
+h2 {
+    /*font-weight: normal;*/
+}
+
+.header {
+    padding: 20px 0 0;
 }
 
 h1 a {
@@ -31,14 +43,6 @@ h1 a {
 
 h1 a:hover {
     color: #333;
-}
-
-h2 {
-    font-weight: normal;
-}
-
-.header {
-    padding: 20px 0 0;
 }
 
 .footer {
@@ -104,24 +108,6 @@ h2 {
 
 
 /* Menu */
-
-/*ul.navigation {
-    list-style: none;
-    margin: 100px 0 0;
-    background: #666666;
-    overflow: hidden;
-}
-
-ul.navigation > li {
-    float: left;
-}
-
-ul.navigation > li > a {
-    display: block;
-    background: #666666;
-    color: #fff;
-    padding: 8px 20px;
-}*/
 
 .sf-menu-wrap {
     background: #666666;
