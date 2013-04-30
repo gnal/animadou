@@ -38,11 +38,11 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
 <div class="container">
     <div class="header">
         <div class="row">
-            <div class="span4">
+            <div class="span5">
                 {# LOGO #}
                 <h1><a href="{{ path('msi_page_home') }}"><img width=200 src="/uploads/images/logo_black.png" alt="0"></a></h1>
             </div>
-            <div class="span8">
+            <div class="span7" style="margin-left: 0;width: 560px;">
                 {# NAVIGATION #}
                 {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 2, 'currentClass': 'active'}) }}
             </div>
