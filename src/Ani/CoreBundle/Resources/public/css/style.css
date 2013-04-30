@@ -126,6 +126,7 @@ ul.navigation > li > a {
 .sf-menu-wrap {
     background: #666666;
     margin: 100px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 ul.sf-menu {
@@ -169,7 +170,7 @@ ul.dropdown-menu {
     border-radius: 0;
     margin: 0;
     padding: 0;
-    box-shadow: none;
+    /*box-shadow: none;*/
     border: 0;
 }
 
