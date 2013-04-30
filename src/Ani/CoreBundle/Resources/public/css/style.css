@@ -47,36 +47,6 @@ h2 {
     padding: 20px 20px;
 }
 
-ul.navigation {
-    list-style: none;
-    margin: 100px 0 0;
-    background: #666666;
-    overflow: hidden;
-}
-
-ul.navigation > li {
-    float: left;
-}
-
-ul.navigation > li > a {
-    display: block;
-    background: #666666;
-    color: #fff;
-    padding: 8px 20px;
-}
-
-/*ul.navigation > li:last-child > a {
-    padding: 8px 20px 16px;
-}
-
-ul.navigation > li:first-child > a {
-    padding: 16px 20px 8px;
-}*/
-
-ul.navigation > li > a:hover {
-    color: #4ba6af;
-}
-
 /* msi-slider */
 
 #slider {
@@ -130,4 +100,96 @@ ul.navigation > li > a:hover {
     text-align: center;
     padding: 30px 20px;
     color: #fff;
+}
+
+
+/* Menu */
+
+/*ul.navigation {
+    list-style: none;
+    margin: 100px 0 0;
+    background: #666666;
+    overflow: hidden;
+}
+
+ul.navigation > li {
+    float: left;
+}
+
+ul.navigation > li > a {
+    display: block;
+    background: #666666;
+    color: #fff;
+    padding: 8px 20px;
+}*/
+
+.sf-menu-wrap {
+    background: #666666;
+    margin: 100px 0 0;
+}
+
+ul.sf-menu {
+    list-style: none;
+    margin: 0;
+}
+
+ul.sf-menu > li {
+    float: left;
+}
+
+ul.sf-menu > li > a {
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+ul.sf-menu > li > a:hover,
+ul.sf-menu > li.current > a,
+ul.sf-menu > li.sfHover > a {
+    color: #4ba6af;
+}
+
+ul.sf-menu > li#home-menu-item > a:hover,
+ul.sf-menu > li#home-menu-item > a {
+    background: none;
+}
+
+a.dropdown-toggle .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+    display: none;
+}
+
+ul.dropdown-menu {
+    background: #666666;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+}
+
+.dropdown-menu li > a {
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.dropdown-menu li.current > a, .sf-menu li.current_ancestor > a {
+    color: #c62032;
+}
+
+.dropdown-menu li:last-child > a {
+    border-bottom: 0;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+    background: #333333;
+    color: #4ba6af;
 }

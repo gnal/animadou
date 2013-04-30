@@ -11,8 +11,8 @@ class MenuBuilder extends BaseMenuBuilder
     {
         $menu = $this->getMenu($factory, 'main');
 
-        $menu->setChildrenAttribute('class', 'navigation');
-        // $this->setBootstrapDropdownMenuAttributes($menu);
+        $menu->setChildrenAttribute('class', 'sf-menu');
+        $this->setBootstrapDropdownMenuAttributes($menu);
 
         return $this->execute($menu);
     }

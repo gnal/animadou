@@ -15,7 +15,20 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="{{ asset('bundles/anicore/vendor/msi-slider/js/msi-slider.js') }}"></script>
+<script src="{{ asset('bundles/anicore/vendor/superfish-1.4.8/js/hoverIntent.js') }}"></script>
+<script src="{{ asset('bundles/anicore/vendor/superfish-1.4.8/js/superfish.js') }}"></script>
 {{ parent() }}
+<script>
+jQuery(function(){
+    jQuery('ul.sf-menu').superfish({
+        speed: 'normal',
+        delay: 0,
+        autoArrows: false,
+        disableHI: true,
+        animation: {opacity: 'show', height: 'show'},
+    });
+});
+</script>
 <script>
 (function($) {
     "use strict";
@@ -44,7 +57,10 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
             </div>
             <div class="span7" style="margin-left: 0;width: 560px;">
                 {# NAVIGATION #}
-                {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 2, 'currentClass': 'active'}) }}
+                <div class="sf-menu-wrap">
+                    {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'active'}) }}
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
     </div>
