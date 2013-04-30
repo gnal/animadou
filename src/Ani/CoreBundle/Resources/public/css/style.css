@@ -116,9 +116,9 @@ h1 a:hover {
 /* Menu */
 
 .sf-menu-wrap {
-    background: #666666;
+    /*background: #666666;*/
     /*margin: 100px 0 0;*/
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
 }
 
 ul.sf-menu {
@@ -133,7 +133,7 @@ ul.sf-menu > li {
 ul.sf-menu > li > a {
     display: block;
     padding: 10px 16px;
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
