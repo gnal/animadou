@@ -47,32 +47,33 @@ jQuery(function(){
 {% endblock js %}
 
 {% block body %}
-<div class="container">
-    <div class="header">
-        <div class="text-right topbar">
-            <small>
-                <a href="#">{{ 'Home'|trans }}</a>
-                |
-                <a href="{{ path('msi_page_home', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a>
-            </small>
-        </div>
-        <div class="row">
-            <div class="span5">
-                {# LOGO #}
-                <h1><a href="{{ path('msi_page_home') }}">ANIMADOU</a></h1>
-            </div>
-            <div class="span7" style="margin-left: 0;width: 560px;">
-                {# NAVIGATION #}
-                <div class="sf-menu-wrap">
-                    {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'current'}) }}
-                    <div class="clearfix"></div>
+<div class="header">
+    <div class="container">
+        <div class="header-inner">
+            {#<div class="text-right topbar">
+                <small>
+                    <a href="#">{{ 'Home'|trans }}</a>
+                    |
+                    <a href="{{ path('msi_page_home', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a>
+                </small>
+            </div>#}
+            <div class="row">
+                <div class="span5">
+                    {# LOGO #}
+                    <h1><a href="{{ path('msi_page_home') }}">Animadou</a></h1>
+                </div>
+                <div class="span7" style="margin-left: 0;width: 560px;">
+                    {# NAVIGATION #}
+                    <div class="sf-menu-wrap">
+                        {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'current'}) }}
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <hr>
-
+</div>
+<div class="container">
     <div class="content">
         {# SLIDER #}
         {% if page.slides.count %}

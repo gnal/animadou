@@ -1,23 +1,10 @@
 {% extends 'AniCoreBundle::layout.html.twig' %}
 
 {% block content %}
-<div class="row">
-    <div class="span9">
-        {% for i, e in 1..12 %}
-        <div class="img-polaroid pull-left" style="height: 145px;width: 145px;margin: 0 10px 10px 0;">
-            <img onload="nl(this);" class="hide pull-left" src="http://placekitten.com/145/145" alt="0">
+        {% for i, e in 1..30 %}
+        <div class="img-polaroid pull-left" style="height: 168px;width: 168px;margin: 0 10px 10px 0;">
+            <img onload="nl(this);" class="hide pull-left" src="http://placekitten.com/168/168" alt="0">
         </div>
         {% endfor %}
         <div class="clearfix"></div>
-    </div>
-    <div class="span3">
-        <div class="tabbable tabs-right">
-        <ul class="nav nav-tabs">
-        <li class="active"><a href="#rA" data-toggle="tab">Les chiens retardés</a></li>
-        <li><a href="#rB" data-toggle="tab">Section chats en furie</a></li>
-        <li><a href="#rC" data-toggle="tab">Poissons et cigarettes</a></li>
-        </ul>
-        </div>
-    </div>
-</div>
 {% endblock content %}

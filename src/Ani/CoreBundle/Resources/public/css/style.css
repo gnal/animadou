@@ -4,8 +4,6 @@ html {
 
 body {
     font-family: "Verdana", Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    line-height: 19px;
     color: #333333;
     background-color: #f5f5f5;
 }
@@ -42,12 +40,21 @@ h2 {
     padding: 15px 0;
 }
 
+.topbar a {
+    color: #fff;
+}
+
 .header {
-    /*padding: 5px 0 0;*/
+    margin-bottom: 20px;
+    background: #4ba6af;
+}
+
+.header-inner {
+    padding: 20px 0;
 }
 
 h1 a {
-    color: #333;
+    color: #fff;
 }
 
 h1 a:hover {
@@ -122,9 +129,9 @@ img {
 /* Menu */
 
 .sf-menu-wrap {
-    background: #666666;
+    /*background: #666666;*/
     /*margin: 100px 0 0;*/
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);*/
 }
 
 ul.sf-menu {
