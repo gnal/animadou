@@ -61,7 +61,7 @@ jQuery(function(){
                 <div class="row">
                     <div class="span5">
                         {# LOGO #}
-                        <h1><a href="{{ path('msi_page_home') }}">animadou <small>pet care services</small></a></h1>
+                        <h2><a href="{{ path('msi_page_home') }}">blobjob <small>pet care services</small></a></h2>
                     </div>
                     <div class="span7" style="margin-left: 0;width: 560px;">
                         {# NAVIGATION #}
@@ -82,8 +82,8 @@ jQuery(function(){
                 <div class="row">
                     <div class="span5">
                         <div class="slider-text">
-                            <h2>Express Help For Your Pets!</h2>
-                            <p>Pellentesque ut massa vitae tortor consequat adipiscing. Nunc consequat rutrum urna eu rhoncus. Aliquam erat volutpat.</p>
+                            <h2>{{ page.translation.sliderTitle }}</h2>
+                            <p>{{ page.translation.sliderText }}</p>
                             <p>&bull; &bull; &bull;</p>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ jQuery(function(){
                 </div>
             {% endif %}
             {# CONTENT #}
-            {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
+            {% if page.showTitle %}<h2>{{ block('title') }}</h2><hr>{% endif %}
             {{ block('page_content') }}
         </div>
     </div>

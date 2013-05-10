@@ -79,6 +79,7 @@ fos_user:
             type: msi_user_profile
 
 msi_cmf:
+    page_admin: Ani\CoreBundle\Admin\PageAdmin
     site_class: Ani\CmfBundle\Entity\Site
     menu_class: Ani\CmfBundle\Entity\Menu
     page_class: Ani\CmfBundle\Entity\Page

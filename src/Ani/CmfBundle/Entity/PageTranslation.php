@@ -21,4 +21,38 @@ class PageTranslation extends BasePageTranslation
      * @ORM\ManyToOne(targetEntity="Page", inversedBy="translations")
      */
     protected $object;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $sliderTitle;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $sliderText;
+
+    public function getSliderTitle()
+    {
+        return $this->sliderTitle;
+    }
+
+    public function setSliderTitle($sliderTitle)
+    {
+        $this->sliderTitle = $sliderTitle;
+
+        return $this;
+    }
+
+    public function getSliderText()
+    {
+        return $this->sliderText;
+    }
+
+    public function setSliderText($sliderText)
+    {
+        $this->sliderText = $sliderText;
+
+        return $this;
+    }
 }
