@@ -1,7 +1,11 @@
 /* header */
 
 .header {
-    padding: 20px;
+    padding: 10px 20px;
+}
+
+.header ul > li > a {
+    font-size: 85%;
 }
 
 /* content */
@@ -124,10 +128,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #3b8ca5;
 }
 
-h1 {
-    margin: 0;
-}
-
 h1 a {
     color: #333;
 }
@@ -172,7 +172,7 @@ img.pull-right {
     width: 560px;
     margin: 0;
     float: left;
-    background: #666666;
+    background: url(/uploads/images/ajax-loader.gif) no-repeat center center #a1a1a1;
 }
 
 #slider ul.slider > li {
@@ -203,9 +203,9 @@ img.pull-right {
 }
 
 
-img {
+/*img {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
+}*/
 
 .slider-text {
 

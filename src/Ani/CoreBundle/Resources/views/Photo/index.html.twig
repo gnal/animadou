@@ -5,7 +5,9 @@
         {% if loop.index == 0 or loop.index%12 == 1 %}<div class="row" style="margin-bottom: 20px;">{% endif %}
             <div class="span1">
                 <div class="img-polaroid">
-                    <img onload="nl(this);" class="hide pull-left" src="http://placekitten.com/g/450/450" alt="0">
+                    <a class="dada" href="http://placekitten.com/g/450/450">
+                        <img onload="nl(this);" class="hide pull-left" src="http://placekitten.com/g/45/45" alt="0">
+                    </a>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -13,3 +15,20 @@
         {% endfor %}
         <div class="clearfix"></div>
 {% endblock content %}
+
+{% block js %}
+{{ parent() }}
+<script src="{{ asset('bundles/anicore/vendor/fancybox/source/jquery.fancybox.js') }}"></script>
+<script>
+$(document).ready(function() {
+    $('.dada').fancybox({
+        fitToView: false,
+    });
+});
+</script>
+{% endblock js %}
+
+{% block css %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset('bundles/anicore/vendor/fancybox/source/jquery.fancybox.css') }}">
+{% endblock css %}
