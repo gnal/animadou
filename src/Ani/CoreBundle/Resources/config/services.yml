@@ -27,3 +27,33 @@ services:
         calls:
             - [addChild, [@msi_cmf_block_admin]]
             - [addChild, [@ani_core_page_slide_admin]]
+
+    # Album
+    ani_core_album_admin:
+        class: Ani\CoreBundle\Admin\AlbumAdmin
+        arguments: [ @ani_core.album_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+        calls:
+            - [addChild, [@ani_core_photo_admin]]
+
+    ani_core.album_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ Ani\CoreBundle\Entity\Album ]
+        parent: msi_cmf.manager
+
+    # Photo
+    ani_core_photo_admin:
+        class: Ani\CoreBundle\Admin\PhotoAdmin
+        arguments: [ @ani_core.photo_manager ]
+        parent: msi_cmf.admin
+        tags:
+            - { name: msi.admin }
+        calls:
+            - [setParent, [@ani_core_album_admin]]
+
+    ani_core.photo_manager:
+        class: %msi_cmf.manager.class%
+        arguments: [ Ani\CoreBundle\Entity\Photo ]
+        parent: msi_cmf.manager
