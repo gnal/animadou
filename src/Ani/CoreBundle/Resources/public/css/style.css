@@ -83,6 +83,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#63a399', end
     text-transform: uppercase;
 }
 
+img.pull-left {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
 /* msi-slider */
 
 #slider {
