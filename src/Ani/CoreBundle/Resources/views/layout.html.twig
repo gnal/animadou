@@ -51,7 +51,7 @@ jQuery(function(){
     <div class="header">
         <div class="row-fluid">
             <div class="span5">
-                <h1><a href="{{ path('msi_page_home') }}"><img style="width: 50px;vertical-align:bottom;" src="http://static.wix.com/media/84770f_c847c841ffcfb44f02155b5eb1c882a1.png_srz_81_92_75_22_0.50_1.20_0.00_png_srz" alt="0"> Animadou <img style="width: 50px;vertical-align:bottom;" src="http://static.wix.com/media/84770f_3dc6a3d94e0f129fe720bedf5f628c2f.png_srz_112_78_75_22_0.50_1.20_0.00_png_srz" alt="cat"></a></h1>
+                <h1><a href="{{ path('msi_page_home') }}"><img style="width: 50px;vertical-align: -0px;" src="http://static.wix.com/media/84770f_c847c841ffcfb44f02155b5eb1c882a1.png_srz_81_92_75_22_0.50_1.20_0.00_png_srz" alt="0"> Animadou <img style="width: 50px;vertical-align: -0px;" src="http://static.wix.com/media/84770f_3dc6a3d94e0f129fe720bedf5f628c2f.png_srz_112_78_75_22_0.50_1.20_0.00_png_srz" alt="cat"></a></h1>
             </div>
             <div class="span7">
                 <ul class="pull-right unstyled">
@@ -105,8 +105,12 @@ jQuery(function(){
     </div>
 
     <div class="footer">
-        <span class="pull-right"><a href="#"><img src="/uploads/images/facebook.png" alt="facebook"></a></span>
-        &copy; {{ 'now'|date('Y') }} Animadou. All rights reserved.
+        <div class="pull-right">
+            <a href="#"><img style="vertical-align: middle;" src="/uploads/images/facebook.png" alt="facebook"></a>
+        </div>
+        <div class="pull-left" style="margin-top: 6px;">
+            &copy; {{ 'now'|date('Y') }} Animadou. All rights reserved.
+        </div>
         <div class="clearfix"></div>
     </div>
 </div>
