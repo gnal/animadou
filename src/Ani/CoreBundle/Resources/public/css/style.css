@@ -105,7 +105,7 @@ html {
 }
 
 body {
-    font-family: "Verdana", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #333333;
     background-color: #525252;
 }
@@ -131,8 +131,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     margin: 15px 0 5px;
-    font-family: 'Lobster', cursive;
-    font-size: 45.5px;
+    font-family: 'Condiment', cursive;
+    font-size: 52.5px;
 }
 
 h1 a {
