@@ -2,16 +2,16 @@
 
 {% block content %}
         {% for i, e in 0..45 %}
-        {% if loop.index == 0 or loop.index%12 == 1 %}<div class="row" style="margin-bottom: 20px;">{% endif %}
-            <div class="span1">
+        {% if loop.index == 0 or loop.index%6 == 1 %}<div class="row-fluid" style="margin-bottom: 20px;">{% endif %}
+            <div class="span2">
                 <div class="img-polaroid">
-                    <a class="dada" href="http://placekitten.com/g/450/450">
-                        <img onload="nl(this);" class="hide pull-left" src="http://placekitten.com/g/45/45" alt="0">
+                    <a class="fancybox" rel="gallery1" href="http://dev.animadou.com/uploads/pageslides/1367901473518885218349b.jpeg">
+                        <img onload="nl(this);" class="hide" src="http://placekitten.com/g/200/200" alt="0">
                     </a>
                     <div class="clearfix"></div>
                 </div>
             </div>
-        {% if loop.index == 46 or loop.index%12 == 0 %}</div>{% endif %}
+        {% if loop.index == 46 or loop.index%6 == 0 %}</div>{% endif %}
         {% endfor %}
         <div class="clearfix"></div>
 {% endblock content %}
@@ -21,8 +21,15 @@
 <script src="{{ asset('bundles/anicore/vendor/fancybox/source/jquery.fancybox.js') }}"></script>
 <script>
 $(document).ready(function() {
-    $('.dada').fancybox({
+    $('.fancybox').fancybox({
+        speedIn: 200,
+        speedOut: 200,
         fitToView: false,
+        helpers: {
+            overlay: {
+                fixed: false
+            }
+        }
     });
 });
 </script>
