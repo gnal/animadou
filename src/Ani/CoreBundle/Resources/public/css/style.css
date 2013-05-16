@@ -129,6 +129,12 @@ h1, h2, h3, h4, h5, h6 {
     color: #3b8ca5;
 }
 
+h1 {
+    margin: 15px 0 5px;
+    font-family: 'Lobster', cursive;
+    font-size: 45.5px;
+}
+
 h1 a {
     /*color: rgb(193, 127, 66);*/
     color: #1a1a1a;
