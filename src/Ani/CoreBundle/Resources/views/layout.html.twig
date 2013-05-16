@@ -47,76 +47,65 @@ jQuery(function(){
 {% endblock js %}
 
 {% block body %}
-<div class="wrap">
+<div class="container">
     <div class="header">
-        <div class="container">
-            <div class="header-inner">
-                {#<div class="text-right topbar">
-                    <small>
-                        <a href="#">{{ 'Home'|trans }}</a>
-                        |
-                        <a href="{{ path('msi_page_home', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a>
-                    </small>
-                </div>#}
-                <div class="row">
-                    <div class="span5">
-                        {# LOGO #}
-                        <a href="{{ path('msi_page_home') }}"><img width=200 src="/uploads/images/logo_black.png" alt="0"></a>
-                    </div>
-                    <div class="span7" style="margin-left: 0;width: 560px;">
-                        {# NAVIGATION #}
-                        <div class="sf-menu-wrap">
-                            {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'current'}) }}
-                            <div class="clearfix"></div>
-                        </div>
+        <div class="row-fluid">
+            <div class="span5">
+                <h1><a href="{{ path('msi_page_home') }}">Animadou</a></h1>
+            </div>
+            <div class="span7">
+                <ul class="nav nav-pills z pull-right" style="margin: 0;">
+                    <li><a href="{{ path('msi_page_home', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sf-menu-wrap">
+        {{ knp_menu_render('AniCoreBundle:MenuBuilder:mainMenu', {'allow_safe_labels': true, 'depth': 3, 'currentClass': 'current'}) }}
+        <div class="clearfix"></div>
+    </div>
+
+    {# SLIDER #}
+    {% if page.slides.count %}
+    <div style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);">
+        <div class="row">
+            <div class="span5">
+                <div class="slider-text">
+                    <h2>{{ page.translation.sliderTitle }}</h2>
+                    <p>{{ page.translation.sliderText }}</p>
+                    <p>&bull; &bull; &bull;</p>
+                </div>
+            </div>
+            <div class="span7" style="margin-left: 0;width: 560px;">
+                <div id=slider>
+                    <ul class="unstyled slider">
+                        {% for slide in page.slides %}
+                            <li><img class="hide" onload="nl(this);" src="{{ slide.pathname }}" alt="0"></li>
+                        {% endfor %}
+                    </ul>
+                    <div class="carousel-wrap">
+                        <ul class="unstyled carousel">
+                            {% for slide in page.slides %}
+                                <li><img class="hide" onload="nl(this);" src="{{ slide.pathname('t') }}" alt="0"></li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="content">
-            {# SLIDER #}
-            {% if page.slides.count %}
-                <div style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);margin-bottom: 30px;">
-                <div class="row">
-                    <div class="span5">
-                        <div class="slider-text">
-                            <h2>{{ page.translation.sliderTitle }}</h2>
-                            <p>{{ page.translation.sliderText }}</p>
-                            <p>&bull; &bull; &bull;</p>
-                        </div>
-                    </div>
-                    <div class="span7" style="margin-left: 0;width: 560px;">
-                        <div id=slider>
-                            <ul class="unstyled slider">
-                                {% for slide in page.slides %}
-                                    <li><img class="hide" onload="nl(this);" src="{{ slide.pathname }}" alt="0"></li>
-                                {% endfor %}
-                            </ul>
-                            <div class="carousel-wrap">
-                                <ul class="unstyled carousel">
-                                    {% for slide in page.slides %}
-                                        <li><img class="hide" onload="nl(this);" src="{{ slide.pathname('t') }}" alt="0"></li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            {% endif %}
-            {# CONTENT #}
-            {% if page.showTitle %}<h2>{{ block('title') }}</h2><hr>{% endif %}
-            {{ block('page_content') }}
-        </div>
+    {% endif %}
+
+    <div class="content">
+        {# CONTENT #}
+        {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
+        {{ block('page_content') }}
     </div>
-    <div class="push"></div>
-</div>
-<div class="footer">
-    <div class="container">
+
+    <div class="footer">
         <div class="footer-inner">
-            <small>&copy; {{ 'now'|date('Y') }} Animadou. All rights reserved.</small>
+            &copy; {{ 'now'|date('Y') }} Animadou. All rights reserved.
         </div>
     </div>
 </div>
