@@ -5,7 +5,7 @@
         "psr-0": { "": "src/" }
     },
     "repositories": [
-        { "type": "vcs", "url": "https://github.com/gnal/MsiCmfBundle.git" },
+        { "type": "vcs", "url": "https://github.com/gnal/cms3.git" },
         { "type": "vcs", "url": "https://github.com/gnal/MsiUserBundle.git" }
     ],
     "require": {
