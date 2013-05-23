@@ -8,13 +8,6 @@ use Symfony\Component\Form\FormBuilder;
 
 class PhotoAdmin extends Admin
 {
-    public function configure()
-    {
-        $this->options = [
-            'icon' => 'picture',
-        ];
-    }
-
     public function buildGrid(GridBuilder $builder)
     {
         $builder
