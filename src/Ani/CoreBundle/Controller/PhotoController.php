@@ -8,6 +8,12 @@ class PhotoController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('AniCoreBundle:Photo:index.html.twig');
+        $album = $this->get('ani_core.album_manager')->getOneBy(
+            ['a.published' => true]
+        );
+
+        return $this->render('AniCoreBundle:Photo:index.html.twig', [
+            'album' => $album,
+        ]);
     }
 }

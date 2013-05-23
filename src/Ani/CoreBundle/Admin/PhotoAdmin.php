@@ -11,6 +11,7 @@ class PhotoAdmin extends Admin
     public function buildGrid(GridBuilder $builder)
     {
         $builder
+            ->add('published', 'boolean')
             ->add('filename', 'image')
             ->add('', 'action')
         ;

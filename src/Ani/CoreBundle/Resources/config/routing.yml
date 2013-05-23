@@ -1,3 +1,8 @@
+ani_core_album_index:
+    pattern:  /{_locale}/albums
+    defaults: { _controller: AniCoreBundle:Album:index }
+
+
 ani_core_photo_index:
-    pattern:  /{_locale}/photos
+    pattern:  /{_locale}/albums/{id}/photos
     defaults: { _controller: AniCoreBundle:Photo:index }

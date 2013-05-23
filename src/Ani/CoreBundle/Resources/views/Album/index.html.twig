@@ -1,0 +1,7 @@
+{% extends 'AniCoreBundle::layout.html.twig' %}
+
+{% block content %}
+{% for album in albums %}
+<a href="{{ path('ani_core_photo_index', {'id': album.id}) }}">{{ album.translation.name }}</a>
+{% endfor %}
+{% endblock content %}

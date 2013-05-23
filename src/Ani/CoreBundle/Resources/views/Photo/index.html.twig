@@ -1,17 +1,17 @@
 {% extends 'AniCoreBundle::layout.html.twig' %}
 
 {% block content %}
-        {% for i, e in 0..45 %}
+        {% for i, e in album.photos %}
         {% if loop.index == 0 or loop.index%6 == 1 %}<div class="row-fluid" style="margin-bottom: 20px;">{% endif %}
             <div class="span2">
                 <div class="img-polaroid">
-                    <a class="fancybox" rel="gallery1" href="http://dev.animadou.com/uploads/pageslides/1367901473518885218349b.jpeg">
+                    <a class="fancybox" rel="gallery1" href="{{ e.pathname }}">
                         <img onload="nl(this);" class="hide" src="http://placekitten.com/g/200/200" alt="0">
                     </a>
                     <div class="clearfix"></div>
                 </div>
             </div>
-        {% if loop.index == 46 or loop.index%6 == 0 %}</div>{% endif %}
+        {% if loop.index == album.photos|length or loop.index%6 == 0 %}</div>{% endif %}
         {% endfor %}
         <div class="clearfix"></div>
 {% endblock content %}
