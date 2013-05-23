@@ -130,8 +130,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin: 15px 0 5px;
-    font-family: 'Condiment', cursive;
+    margin: 15px 0 0;
+    /*font-family: 'Condiment', cursive;*/
     font-size: 52.5px;
 }
 

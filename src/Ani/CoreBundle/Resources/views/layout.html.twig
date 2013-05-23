@@ -1,7 +1,7 @@
 {% extends 'MsiCmfBundle:Page:layout.html.twig' %}
 
 {% block css %}
-<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('bundles/anicore/css/style.css') }}">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Condiment' rel='stylesheet' type='text/css'>
@@ -12,9 +12,9 @@ function nl(t){t.className=t.className.replace(new RegExp(/\shide|hide\s|hide/),
 {% endblock css %}
 
 {% block js %}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="{{ asset('bundles/anicore/vendor/msi-slider/js/msi-slider.js') }}"></script>
 <script src="{{ asset('bundles/anicore/vendor/superfish-1.4.8/js/hoverIntent.js') }}"></script>
 <script src="{{ asset('bundles/anicore/vendor/superfish-1.4.8/js/superfish.js') }}"></script>
@@ -53,11 +53,12 @@ jQuery(function(){
     <div class="header">
         <div class="row-fluid">
             <div class="span9">
-                <h1><a href="{{ path('msi_page_home') }}"><img style="width: 50px;vertical-align: -3px;" src="http://static.wix.com/media/84770f_c847c841ffcfb44f02155b5eb1c882a1.png_srz_81_92_75_22_0.50_1.20_0.00_png_srz" alt="0"> Animadou <img style="width: 50px;vertical-align: -3px;" src="http://static.wix.com/media/84770f_3dc6a3d94e0f129fe720bedf5f628c2f.png_srz_112_78_75_22_0.50_1.20_0.00_png_srz" alt="cat"> <span style="font-size: 14px;">{{ 'slogan'|trans }}<span></a></h1>
+                <h1><a href="{{ path('homepage') }}">Animadou{# <img style="width: 50px;vertical-align: -3px;" src="http://static.wix.com/media/84770f_3dc6a3d94e0f129fe720bedf5f628c2f.png_srz_112_78_75_22_0.50_1.20_0.00_png_srz" alt="cat"><img style="width: 50px;vertical-align: -3px;" src="http://static.wix.com/media/84770f_c847c841ffcfb44f02155b5eb1c882a1.png_srz_81_92_75_22_0.50_1.20_0.00_png_srz" alt="0">#}</a></h1>
+                <span class="muted" style="font-size: 14px;">{{ 'slogan'|trans }}<span>
             </div>
             <div class="span3">
                 <ul class="pull-right unstyled">
-                    <li><a href="{{ path('msi_page_home', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a></li>
+                    <li><a href="{{ path('homepage', {'_locale': app.request.locale == 'fr' ? 'en' : 'fr'}) }}">{{ app.request.locale == 'fr' ? 'English' : 'Français' }}</a></li>
                 </ul>
             </div>
         </div>
@@ -102,7 +103,9 @@ jQuery(function(){
     <div class="content">
         {# CONTENT #}
         {% if page.showTitle %}<h2>{{ block('title') }}</h2>{% endif %}
+        {{ msi_block_render('content_top', page) }}
         {{ block('page_content') }}
+        {{ msi_block_render('content_bottom', page) }}
         <div class="clearfix"></div>
     </div>
 

@@ -1,6 +1,8 @@
 homepage:
-    pattern: /
-    defaults: { _controller: MsiCmfBundle:Page:show }
+    pattern:  /{_locale}/
+    defaults: { _controller: AniCoreBundle:Default:homepage }
+    requirements:
+        _locale: fr|en
 
 ani_core:
     resource: "@AniCoreBundle/Resources/config/routing.yml"
@@ -27,10 +29,6 @@ fos_user_change_password:
 
 msi_cmf_routing:
     resource: "@MsiCmfBundle/Resources/config/routing/routing.yml"
-    prefix: /
-
-msi_cmf_page:
-    resource: "@MsiCmfBundle/Resources/config/routing/page.yml"
     prefix: /
 
 msi_cmf_loader:
