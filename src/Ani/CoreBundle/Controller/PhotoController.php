@@ -10,7 +10,7 @@ class PhotoController extends Controller
     public function indexAction()
     {
         $album = $this->get('ani_core.album_manager')->getFindByQueryBuilder(
-            ['a.published' => true, 'p.published' => true],
+            ['a.id' => $this->getRequest()->attributes->get('id'), 'a.published' => true, 'p.published' => true],
             ['a.photos' => 'p'],
             ['p.position' => 'ASC']
         )->getQuery()->getOneOrNullResult();
