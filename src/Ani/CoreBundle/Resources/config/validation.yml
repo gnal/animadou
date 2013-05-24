@@ -1,0 +1,4 @@
+Ani\CoreBundle\Entity\AlbumTranslation:
+    properties:
+        title:
+            - NotBlank: ~
