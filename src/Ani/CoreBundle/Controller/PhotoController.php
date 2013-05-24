@@ -9,7 +9,9 @@ class PhotoController extends Controller
     public function indexAction()
     {
         $album = $this->get('ani_core.album_manager')->getOneBy(
-            ['a.published' => true]
+            ['a.published' => true],
+            ['a.photos' => 'p'],
+            ['p.position' => 'ASC']
         );
 
         return $this->render('AniCoreBundle:Photo:index.html.twig', [
