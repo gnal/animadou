@@ -1,7 +1,17 @@
 {% extends 'AniCoreBundle::layout.html.twig' %}
 
 {% block content %}
-{% for album in albums %}
-<a href="{{ path('ani_core_photo_index', {'id': album.id}) }}">{{ album.translation.name }}</a>
+{% for i, e in albums %}
+{% if loop.index == 0 or loop.index%4 == 1 %}<div class="row" style="margin-bottom: 20px;">{% endif %}
+    <div class="span3 text-center" style="width: 200px;margin-left: 28px;">
+        <div class="img-polaroid" style="margin-bottom: 5px;">
+            <a class="fancybox" rel="gallery1" href="{{ path('ani_core_photo_index', {'id': e.id}) }}">
+                <img onload="nl(this);" class="hide" src="{{ e.photos.first.pathname('t') }}" alt="0">
+            </a>
+            <div class="clearfix"></div>
+        </div>
+        {{ e.translation.name }}
+    </div>
+{% if loop.index == albums|length or loop.index%4 == 0 %}</div>{% endif %}
 {% endfor %}
 {% endblock content %}

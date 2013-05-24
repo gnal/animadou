@@ -55,6 +55,7 @@ class Photo implements TimestampableInterface, UploadableInterface
         $cutter = new Cutter($file);
 
         $cutter->resizeProp(600)->save();
+        $cutter->resize(190, 120)->save('t');
     }
 
     public function getPosition()
